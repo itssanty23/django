@@ -23,3 +23,10 @@ urlpatterns = [
 
 
 ]
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),  # La URL para el panel de administración
+    path('', include('blog.urls')),  # La URL para la página principal del blog
+]
